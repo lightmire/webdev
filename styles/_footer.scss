@@ -1,0 +1,25 @@
+$margin: 8px;
+
+@mixin theme($theme: DarkGrey) {
+    background: $theme;
+    box-shadow: 0px 0px 0px rgba($theme, 0.5);
+    color: white;
+}
+
+.info {
+    @include theme;
+}
+
+.success {
+    @include theme($theme: DarkGreen);
+}
+
+.danger {
+    @include theme($theme: DarkRed);
+}
+
+footer {
+    margin-top: $margin * 3;
+    padding: 16px;
+    text-align: center;
+}
